@@ -1,7 +1,7 @@
 databases:
   - name: myblogdb
     plan: free
-    databaseName: mysite
+    databaseName: myblogdb
     user: postgres
 
 services:
