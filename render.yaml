@@ -1,16 +1,16 @@
 databases:
   - name: myblogdb
     plan: free
-    databaseName: myblogdb
+    databaseName: yblogdb
     user: postgres
 
 services:
   - type: web
     plan: free
-    name: myblog
+    name: myblogdb
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn myblog.asgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: "python -m gunicorn myblogdb.asgi:application -k uvicorn.workers.UvicornWorker"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
