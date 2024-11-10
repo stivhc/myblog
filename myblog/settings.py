@@ -10,7 +10,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Cargar las variables de entorno desde el archivo .env
 
-load_dotenv(os.path.join(BASE_DIR, ".env"))
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -74,7 +74,7 @@ WSGI_APPLICATION = "myblog.wsgi.application"
 DATABASES = {
     "default": dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default="postgresql://postgres:paltamayo@localhost:5432/nmyblogdb",
+        default="postgresql://postgres:paltamayo@localhost:5432/myblogdb",
         conn_max_age=600,
     )
 }
