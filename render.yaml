@@ -2,7 +2,7 @@ databases:
   - name: myblogdb
     plan: free
     databaseName: yblogdb
-    user: postgres
+    user: stivhc
 
 services:
   - type: web
